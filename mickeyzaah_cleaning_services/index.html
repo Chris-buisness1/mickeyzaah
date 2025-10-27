@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mickey Zaah Cleaning Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="shortcut icon" href="./images/logo.PNG" type="image/x-icon" />
+  <style>
+    :root {
+      --primary: #2a9d8f;
+      --primary-dark: #1d7874;
+      --secondary: #e9c46a;
+      --accent: #e76f51;
+      --light: #f8f9fa;
+      --dark: #264653;
+      --gray: #6c757d;
+      --white: #ffffff;
+    }
+/* Navigation (Desktop) */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      color: var(--dark);
+      background-color: var(--light);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    h1, h2, h3, h4 {
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    h2:after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--primary);
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    /* Navigation (Desktop) */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+    .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--dark);
+    cursor: pointer;
+    z-index: 1100;
+}
+
+
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("./images/woman_cleaning.jpg");
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      text-align: center;
+      padding: 150px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-card {
+      background-color: var(--white);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .services {
+      background-color: #f1f8f7;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-img {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .service-content {
+      padding: 25px;
+    }
+
+    .service-tag {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: var(--dark);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+    }
+
+    .contact-details p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .contact-details i {
+      margin-right: 10px;
+      color: var(--primary);
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 50%;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: var(--white);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .footer-logo span {
+      color: var(--accent);
+    }
+
+    /* Responsive Navigation (Mobile) */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background-color: var(--white);
+        box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+        padding: 100px 30px;
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        right: 0;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        min-width: 100%;
+    }
+}
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">Mickey<span>Zaah</span></a>
+      <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Mickey Zaah Cleaning Services</h1>
+      <p>Sit back, relax, and let us handle the dirt, transforming your space into <br> something <strong>fresh</strong>, <strong>clean</strong>, and <strong>spotless</strong>.</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-globe"></i></div>
+          <h3>We Clean Everywhere</h3>
+          <p>From homes to offices, no location is too far. Our cleaning teams reach you wherever you are.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Fast Response</h3>
+          <p>Need urgent cleaning? Our rapid team ensures quick service when you need it most.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Easy Booking</h3>
+          <p>Book your cleaning service in seconds ⚡ simple, fast, and hassle-free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2>Our Professional Cleaning Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-img" style="background-image:url('./images/woman_cleaning.jpg')"></div>
+          <div class="service-content">
+            <span class="service-tag">HOME CARE</span>
+            <h3>Recurring Home Cleaning</h3>
+            <p>Weekly or monthly cleaning that keeps your home spotless all year long.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img" style="background-image:url('./images/hotel.jpg')"></div>
+          <div class="service-content">
+            <span class="service-tag">RENTALS</span>
+            <h3>Airbnb & Vacation Cleaning</h3>
+            <p>Make guests feel at home with 5-star quality cleaning services.</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img" style="background-image:url('./images/office.jpg')"></div>
+          <div class="service-content">
+            <span class="service-tag">COMMERCIAL</span>
+            <h3>Office & Business Cleaning</h3>
+            <p>Focus on your work we’ll handle the mess.</p>
+          </div>
+        </div>
+          <div class="service-card">
+                <div class="service-img" style="background-image: url('./images/clean.jpg');"></div>
+                <div class="service-content">
+                    <span class="service-tag">DEEP CLEANING</span>
+                    <h3>One-Time Deep Cleaning</h3>
+                    <p>Perfect for move-ins, move-outs, or post-renovations. 
+                    We dig deep to remove dust, grime, and buildup restoring your space to like-new condition.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('./images/group_cleaning.jpg');"></div>
+                <div class="service-content">
+                    <span class="service-tag">CUSTOM</span>
+                    <h3>Tailored Cleaning Plans</h3>
+                    <p>Every space is different and so is every client. 
+                    Get a fully customized cleaning plan that matches your exact needs, schedule, and budget.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img" style="background-image: url('./images/relocate.jpg');"></div>
+                <div class="service-content">
+                    <span class="service-tag">MOVE-IN / MOVE-OUT</span>
+                    <h3>Move-In & Move-Out Cleaning</h3>
+                    <p>Make your move stress-free. 
+                    We handle the deep clean before you settle in or after you leave ensuring a spotless, ready-to-go space every time.</p>
+                </div>
+            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="about" style="
+  background-color: #f9fafb;
+  padding: 80px 20px;
+  text-align: center;
+">
+  <div style="max-width: 850px; margin: 0 auto;">
+    <h2 style="
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 20px;
+    ">
+      About Us
+    </h2>
+    <p style="
+      font-size: 1.15rem;
+      color: #374151;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    ">
+      At <strong>MickeyZaah Cleaning</strong>, we believe that a clean space creates peace of mind and positive energy.
+      We’re a dedicated team passionate about providing professional, reliable, and affordable cleaning services
+      for both homes and businesses.
+    </p>
+    <p style="
+      font-size: 1.15rem;
+      color: #4b5563;
+      line-height: 1.8;
+    ">
+      Our goal is simple to make every space shine with care and attention to detail.
+      Whether it’s your home, office, or special event, we go the extra mile so you can enjoy a spotless, stress-free environment.
+    </p>
+  </div>
+</section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <div class="contact-details">
+            <p><i class="fas fa-map-marker-alt"></i> Accra and Koforidua</p>
+            <p><i class="fas fa-envelope"></i> mickeyzaa@gmail.com</p>
+            <p><i class="fas fa-phone"></i> 0506451432</p>
+            <p><i class="fab fa-whatsapp"></i> 0539380036</p>
+          </div>
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section" style="background:#fff;padding:30px;border-radius:8px;">
+          <h3 style="color:var(--primary);margin-bottom:10px;">Subscribe to Our Newsletter</h3>
+          <p style="margin-bottom:20px;color:var(--gray);">Stay updated with cleaning tips, promos, and new services straight to your inbox.</p>
+          <form action="https://formsubmit.co/chris4202am@gmail.com" method="POST" style="display:flex;flex-direction:column;gap:10px;">
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New Newsletter Subscription!" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html" />
+
+            <input type="email" name="email" placeholder="Enter your email" required
+              style="padding:12px 15px;border-radius:6px;border:1px solid #ddd;font-size:1rem;" />
+            <button type="submit" class="btn" style="width:100%;">Subscribe</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="#" class="footer-logo">Mickey<span>Zaah</span></a>
+      <p>Professional Cleaning Services You Can Trust</p>
+      <p>Sit back while we handle the dirt</p>
+      <p class="copyright"><span id="year"></span> &copy; Mickey Zaah Cleaning Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('nav ul');
+    const icon = mobileMenuBtn.querySelector('i');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+
+        // Toggle icon between hamburger and close
+        if (navMenu.classList.contains('show')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Close the menu when a link is clicked
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('show');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
+</script>
+
+</body>
+</html>
