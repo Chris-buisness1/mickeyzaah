@@ -330,6 +330,13 @@ nav ul li a:hover {
         z-index: 1000;
     }
 
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     nav ul.show {
         right: 0;
     }
@@ -350,6 +357,7 @@ nav ul li a:hover {
         min-width: 100%;
     }
 }
+
 
 
 
