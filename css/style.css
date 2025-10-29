@@ -159,7 +159,7 @@ nav ul li a:hover {
     color: var(--dark);
     cursor: pointer;
     z-index: 1100;
-    right: 50px;
+    right: 10px;
 
 }
 
@@ -350,4 +350,5 @@ nav ul li a:hover {
         min-width: 100%;
     }
 }
+
 
